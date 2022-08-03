@@ -1,0 +1,21 @@
+name: _69shu
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  _36664:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run 69shu script
+        run: chmod +x ./69shu && ./69shu --url=https://www.69shu.com/txt/36664/29165010 --dir=36664
+        
+      - name: Push
+        run: |
+          git config --global user.name 'to3c4j'
+          git config --global user.email 'to3c4j@gmail.com'
+          git add .
+          git commit -am "auto commit"
+          git push
