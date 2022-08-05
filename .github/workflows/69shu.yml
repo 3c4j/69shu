@@ -5,33 +5,23 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  _36664:
+  default:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run 69shu script
-        run: chmod +x ./69shu && ./69shu --url=https://www.69shu.com/txt/36664/25505754 --dir=夜的命名术
+      - name: Allow 69shu script to run
+        run: chmod +x ./69shu
+
+      - name: Run 69shu script with 36664
+        run: ./69shu --url=https://www.69shu.com/txt/36664/25505754 --dir=夜的命名术
+
+      - name: Run 69shu script with 19477
+        run: ./69shu --url=https://www.69shu.com/txt/19477/11228783 --dir=伏天氏
 
       - name: Push
         run: |
-          git config --global user.name 'to3c4j'
-          git config --global user.email 'to3c4j@gmail.com'
-          git add .
-          git commit -am "auto commit"
-          git pull && git push
-
-  _19477:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run 69shu script
-        run: chmod +x ./69shu && ./69shu --url=https://www.69shu.com/txt/19477/11228783 --dir=伏天氏
-
-      - name: Push
-        run: |
-          git config --global user.name 'to3c4j'
+          git config --global user.name '3c4j'
           git config --global user.email 'to3c4j@gmail.com'
           git add .
           git commit -am "auto commit"
