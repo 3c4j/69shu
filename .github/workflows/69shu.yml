@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run 69shu script
-        run: chmod +x ./69shu && ./69shu --url=https://www.69shu.com/txt/36664/29165010 --dir=夜的命名术
+        run: chmod +x ./69shu && ./69shu --url=https://www.69shu.com/txt/36664/25505754 --dir=夜的命名术
 
       - name: Push
         run: |
