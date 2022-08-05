@@ -19,7 +19,7 @@ jobs:
           git config --global user.email 'to3c4j@gmail.com'
           git add .
           git commit -am "auto commit"
-          git push
+          git pull && git push
 
   _19477:
     runs-on: ubuntu-latest
@@ -35,4 +35,4 @@ jobs:
           git config --global user.email 'to3c4j@gmail.com'
           git add .
           git commit -am "auto commit"
-          git push
+          git pull && git push
